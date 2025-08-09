@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Opciones - Recall Defender</title>
+  <style>
+    body { width: 500px; padding: 20px; font-family: Arial; }
+    h1 { font-size: 18px; color: #0060df; }
+    textarea { 
+      width: 100%; 
+      height: 100px; 
+      margin: 10px 0; 
+      padding: 8px; 
+      border: 1px solid #ddd; 
+    }
+    button { 
+      background: #0060df; 
+      color: white; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 4px; 
+      cursor: pointer; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Configuración avanzada</h1>
+  
+  <h3>Dominios bloqueados (uno por línea):</h3>
+  <textarea id="blockedDomains">telemetry.microsoft.com
+recall.windows.com
+activity.windows.com</textarea>
+  
+  <h3>APIs desactivadas:</h3>
+  <label><input type="checkbox" id="disableScreenCapture" checked> getDisplayMedia()</label><br>
+  <label><input type="checkbox" id="disableCanvas" checked> Canvas API</label><br>
+  <label><input type="checkbox" id="disableWebRTC"> WebRTC</label><br>
+
+  <button id="saveBtn">Guardar</button>
+
+  <script src="options.js"></script>
+</body>
+</html>

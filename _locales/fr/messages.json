@@ -1,0 +1,44 @@
+{
+    "extensionName": {
+      "message": "Recall Defender",
+      "description": "Nom de l'extension."
+    },
+    "extensionDescription": {
+      "message": "Bloque Microsoft Recall et sa télémétrie dans Firefox.",
+      "description": "Description de l'extension."
+    },
+    "popupTitle": {
+      "message": "Protections activées",
+      "description": "Titre de la popup."
+    },
+    "blockedDomainsLabel": {
+      "message": "📌 Domaines bloqués :",
+      "description": "Libellé pour les domaines bloqués."
+    },
+    "apisBlockedLabel": {
+      "message": "🛡️ API bloquées :",
+      "description": "Libellé pour les API bloquées."
+    },
+    "containersActiveLabel": {
+      "message": "🔒 Conteneurs actifs :",
+      "description": "Libellé pour les conteneurs actifs."
+    },
+    "advancedSettingsBtn": {
+      "message": "Paramètres avancés",
+      "description": "Texte du bouton des paramètres."
+    },
+    "viewLogsBtn": {
+      "message": "Voir les logs",
+      "description": "Texte du bouton des logs."
+    },
+    "blockedAlert": {
+      "message": "Bloqué : $DOMAIN$",
+      "description": "Alerte lorsqu'un domaine est bloqué.",
+      "placeholders": {
+        "domain": {
+          "content": "$1",
+          "example": "telemetry.microsoft.com"
+        }
+      }
+    }
+  }
