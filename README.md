@@ -40,21 +40,23 @@ A privacy-focused Firefox extension that blocks Microsoft Recall's data collecti
 
 Install from AMO
 
-https://img.shields.io/badge/Download-AMO-orange?logo=firefox
+(https://img.shields.io/badge/Download-AMO-orange?logo=firefox)
+
+
 🏗️ Project Structure
 plaintext
-
-/recall-defender-firefox
-├── _locales/               # i18n (en/es/pt_BR/de/it/fr)
-│   └── [lang]/messages.json
-├── src/
-│   ├── popup/              # Popup UI
-│   ├── options/            # Settings page
-│   ├── background.js       # Domain blocking
-│   └── content.js         # API disabling
-├── icons/                  # Extension icons
-├── manifest.json           # Core config
-└── README.md               # This file
+	
+	/recall-defender-firefox
+	├── _locales/               # i18n (en/es/pt_BR/de/it/fr)
+	│   └── [lang]/messages.json
+	├── src/
+	│   ├── popup/              # Popup UI
+	│   ├── options/            # Settings page
+	│   ├── background.js       # Domain blocking
+	│   └── content.js         # API disabling
+	├── icons/                  # Extension icons
+	├── manifest.json           # Core config
+	└── README.md               # This file
 
 🌍 Add New Language
 
@@ -96,4 +98,4 @@ npm install -g web-ext
 📜 License
 
 MIT © odisk777
-<p align="center"> <img src="https://img.shields.io/badge/Privacy%20Matters-✓-green?style=for-the-badge" alt="Privacy Matters"> </p> ```
+<p align="center"> <img src="https://img.shields.io/badge/Privacy%20Matters-✓-green?style=for-the-badge" alt="Privacy Matters"> </p> 
