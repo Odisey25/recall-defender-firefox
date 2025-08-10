@@ -22,7 +22,7 @@ A privacy-focused Firefox extension that blocks Microsoft Recall telemetry and p
 [![Install from AMO](https://img.shields.io/badge/Install-Firefox_Add_ons-orange?logo=firefox)](https://addons.mozilla.org/firefox/addon/recall-defender/)
 
 ### Manual Installation
-```bash
+
 git clone https://github.com/Odisey25/recall-defender-firefox.git
 cd recall-defender-firefox
 
@@ -81,6 +81,7 @@ Your support helps maintain and improve this privacy tool!
 📜 License
 
 MIT © Odisey25
-<p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> ```
+
+<p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> 
 
 [Support] [PayPal] [Buy Me a Coffee]
