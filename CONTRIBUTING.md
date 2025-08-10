@@ -143,5 +143,3 @@ All significant contributions will:
     Appear in the contributors section
 
     Receive a shout-out on Twitter (if desired)
-
-https://img.shields.io/badge/Thank_You-Buy_Me_A_Coffee-FFDD00
