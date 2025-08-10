@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Recall Defender</title>
+  <style>
+    :root {
+      --primary-color: #0060df;
+      --background-color: #f9f9f9;
+      --card-color: #ffffff;
+      --text-color: #333333;
+      --switch-active: #0060df;
+      --switch-inactive: #cccccc;
+    }
+
+    body { 
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      background: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    .header img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .title {
+      flex-grow: 1;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* Toggle Switch Styles */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--switch-inactive);
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--switch-active);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Stats Card */
+    .stats {
+      background: var(--card-color);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 12px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    /* Buttons */
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin: 4px 0;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #003eaa;
+    }
+
+    button + button {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon-48.png" alt="Recall Defender Icon">
+    <div class="title">Recall Defender</div>
+    <label class="switch">
+      <input type="checkbox" id="masterSwitch" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="stats">
+    <div class="stat-item">
+      <span>📌 Blocked domains:</span>
+      <span id="blockedCount">0</span>
+    </div>
+    <div class="stat-item">
+      <span>🛡️ Blocked APIs:</span>
+      <span id="apisBlocked">0</span>
+    </div>
+    <div class="stat-item">
+      <span>🔒 Active containers:</span>
+      <span id="containersActive">0</span>
+    </div>
+  </div>
+
+  <button id="advancedBtn">Advanced Settings</button>
+  <button id="viewLogsBtn">View Logs</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

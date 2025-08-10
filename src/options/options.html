@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Settings - Recall Defender</title>
+  <style>
+    :root {
+      --primary-color: #0060df;
+      --background-color: #f9f9f9;
+      --text-color: #333333;
+      --border-color: #dddddd;
+    }
+
+    body {
+      width: 500px;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 img {
+      width: 24px;
+      height: 24px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 15px 0 8px 0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      margin: 8px 0 15px 0;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-family: monospace;
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      margin: 15px 0;
+    }
+
+    .checkbox-item {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-item input {
+      margin-right: 10px;
+    }
+
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #003eaa;
+    }
+
+    .status-message {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .success {
+      background-color: #e6f4ea;
+      color: #0a7b0e;
+    }
+
+    .error {
+      background-color: #fce8e6;
+      color: #c5221f;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <img src="../icons/icon-48.png" alt="Recall Defender Icon">
+    Recall Defender Settings
+  </h1>
+  
+  <h3>Blocked domains (one per line):</h3>
+  <textarea id="blockedDomains" placeholder="Example:&#10;telemetry.microsoft.com&#10;recall.windows.com"></textarea>
+  
+  <h3>Disabled APIs:</h3>
+  <div class="checkbox-group">
+    <div class="checkbox-item">
+      <input type="checkbox" id="disableScreenCapture" checked>
+      <label for="disableScreenCapture">Screen Capture API (getDisplayMedia)</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="disableCanvas" checked>
+      <label for="disableCanvas">Canvas Fingerprinting Protection</label>
+    </div>
+    <div class="checkbox-item">
+      <input type="checkbox" id="disableWebRTC">
+      <label for="disableWebRTC">WebRTC IP Leak Protection</label>
+    </div>
+  </div>
+
+  <button id="saveBtn">Save Settings</button>
+  <div id="statusMessage" class="status-message"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

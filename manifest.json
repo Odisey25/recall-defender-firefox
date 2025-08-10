@@ -1,38 +1,28 @@
 {
-    "manifest_version": 2,
-    "name": "Recall Defender",
-    "version": "1.0",
-    "description": "Bloquea Microsoft Recall y su telemetría en Firefox.",
-    "icons": {
-      "48": "icons/shield.png"
-    },
-    "permissions": [
-      "webRequest",
-      "webRequestBlocking",
-      "storage",
-      "contextualIdentities",
-      "cookies",
-      "tabs",
-      "*://*.microsoft.com/*",
-      "*://*.windows.com/*"
-    ],
-    "background": {
-      "scripts": ["background.js"]
-    },
-    "content_scripts": [{
-      "matches": ["*://*.microsoft.com/*", "*://*.windows.com/*"],
-      "js": ["content-script.js"]
-    }],
-    "browser_action": {
-      "default_icon": "icons/shield.png",
-      "default_title": "Recall Defender",
-      "default_popup": "popup/popup.html"
-    },
-    "options_ui": {
-      "page": "options/options.html",
-      "open_in_tab": true
-    },
-    "web_accessible_resources": [
-      "logs/logs.html"
-    ]
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "contextualIdentities",
+    "*://*.microsoft.com/*"
+  ],
+  "background": {
+    "scripts": ["src/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon-48.png",
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": false
   }
+}

@@ -1,101 +1,88 @@
-# Recall Defender for Firefox  
+# Recall Defender for Firefox 🛡️
 
-🛡️ **Block Microsoft Recall and Its Telemetry in Firefox** | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) | [![Firefox Add-on](https://img.shields.io/amo/v/recall-defender?color=orange)](https://addons.mozilla.org/firefox/addon/recall-defender/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Firefox Add-on](https://img.shields.io/amo/v/recall-defender?color=orange)](https://addons.mozilla.org/firefox/addon/recall-defender/)
+[![GitHub Stars](https://img.shields.io/github/stars/Odisey25/recall-defender-firefox)](https://github.com/Odisey25/recall-defender-firefox/stargazers)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/herin2019)
 
-A privacy-focused Firefox extension that blocks Microsoft Recall's data collection by:  
-✅ **Blocking telemetry domains**  
-🚫 **Disabling screen capture APIs**  
-🔒 **Isolating Microsoft sites in containers**  
+A privacy-focused Firefox extension that blocks Microsoft Recall telemetry and protects against unwanted data collection.
 
-![Popup Demo](screenshots/popup-en.png)  
-*(Screenshot: Protection stats in English)*  
+![Extension Screenshot](assets/screenshot.png) *(Replace with your actual screenshot)*
 
----
+## ✨ Features
 
-## 🌟 Features  
-- Blocks `*.telemetry.microsoft.com`, `recall.windows.com`, etc.  
-- Disables `getDisplayMedia()`, `Canvas`, and `WebRTC` on Microsoft domains  
-- Auto-purges cookies/storage after sessions  
-- Real-time protection indicators  
-- Supports 6 languages:  
-  ![Languages](https://img.shields.io/badge/Languages-6-blue?style=flat&logo=google-translate)  
+- 🔥 **Blocks Recall domains**: `telemetry.microsoft.com`, `recall.windows.com`, etc.
+- 🚫 **Disables tracking APIs**: Screen capture, Canvas fingerprinting, WebRTC
+- 🌍 **Multi-language support**: English, Spanish, Portuguese, German, Italian, French
+- 🔒 **Automatic isolation**: Firefox Containers for Microsoft sites
+- 📊 **Real-time monitoring**: Activity logging and statistics
 
----
+## 🚀 Installation
 
-## ⚡ Quick Start  
+### From Firefox Add-ons
+[![Install from AMO](https://img.shields.io/badge/Install-Firefox_Add_ons-orange?logo=firefox)](https://addons.mozilla.org/firefox/addon/recall-defender/)
 
-### Load Unpacked (Development)  
-1. Clone repo:  
-   ```bash
-   git clone https://github.com/odisk777/recall-defender-firefox.git
-   cd recall-defender-firefox
+### Manual Installation
+```bash
+git clone https://github.com/Odisey25/recall-defender-firefox.git
+cd recall-defender-firefox
 
-    In Firefox:
+    Open Firefox and navigate to about:debugging#/runtime/this-firefox
 
-        Navigate to about:debugging#/runtime/this-firefox
+    Click "Load Temporary Add-on"
 
-        Click "Load Temporary Add-on"
+    Select the manifest.json file
 
-        Select manifest.json
-
-Install from AMO
-
-(https://img.shields.io/badge/Download-AMO-orange?logo=firefox)
-
-
-🏗️ Project Structure
-plaintext
-	
-	/recall-defender-firefox
-	├── _locales/               # i18n (en/es/pt_BR/de/it/fr)
-	│   └── [lang]/messages.json
-	├── src/
-	│   ├── popup/              # Popup UI
-	│   ├── options/            # Settings page
-	│   ├── background.js       # Domain blocking
-	│   └── content.js         # API disabling
-	├── icons/                  # Extension icons
-	├── manifest.json           # Core config
-	└── README.md               # This file
-
-🌍 Add New Language
-
-    Create _locales/[code]/messages.json (e.g., ja for Japanese)
-
-    Follow existing JSON structure:
-    json
-
-    {
-      "extensionName": { "message": "リコールディフェンダー" },
-      "extensionDescription": { "message": "Microsoft Recallをブロックします" }
-    }
-
-    Submit a PR!
-
-🛠️ Developer Commands
-Command	Description
-web-ext run	Live-reload for testing
-web-ext build	Create .xpi package
-web-ext lint	Validate extension
-
-Requires web-ext:
+🛠️ Development
 bash
 
-npm install -g web-ext
+# Install web-ext tool
+npm install --global web-ext
 
-🤝 How to Contribute
+# Run in development mode
+web-ext run
+
+# Build package
+web-ext build
+
+📂 Project Structure
+text
+
+recall-defender-firefox/
+├── src/
+│   ├── background/    # Core blocking logic
+│   ├── content/       # API protections
+│   ├── options/       # Settings page
+│   └── popup/         # Extension popup
+├── icons/             # Extension icons
+├── _locales/          # Translations
+└── manifest.json      # Extension config
+
+🤝 Contributing
+
+We welcome contributions! Please follow these steps:
 
     Fork the repository
 
-    Create a feature branch (git checkout -b feat/new-thing)
+    Create a feature branch (git checkout -b feature/your-feature)
 
-    Commit changes (git commit -am 'Add cool feature')
+    Commit your changes (git commit -am 'Add some feature')
 
-    Push to branch (git push origin feat/new-thing)
+    Push to the branch (git push origin feature/your-feature)
 
     Open a Pull Request
 
+💖 Support This Project
+
+If you find this extension useful, consider supporting its development:
+
+https://img.shields.io/badge/Donate-PayPal-blue.svg
+
+Your support helps maintain and improve this privacy tool!
 📜 License
 
-MIT © odisk777
-<p align="center"> <img src="https://img.shields.io/badge/Privacy%20Matters-✓-green?style=for-the-badge" alt="Privacy Matters"> </p> 
+MIT © Odisey25
+
+[Support] [PayPal] [Buy Me a Coffee]
+
+<p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Activity Logs - Recall Defender</title>
+  <style>
+    :root {
+      --primary-color: #0060df;
+      --background-color: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --log-background: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background: var(--background-color);
+      color: var(--text-color);
+      min-width: 400px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      width: 32px;
+      height: 32px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 0;
+      color: var(--primary-color);
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #003eaa;
+    }
+
+    button.secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    #logs {
+      background: var(--log-background);
+      padding: 10px;
+      border-radius: 8px;
+      max-height: 500px;
+      overflow-y: auto;
+      border: 1px solid var(--border-color);
+    }
+
+    .log-entry {
+      margin: 8px 0;
+      padding: 8px;
+      border-bottom: 1px solid var(--border-color);
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .log-entry:last-child {
+      border-bottom: none;
+    }
+
+    .log-time {
+      color: #666;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="../icons/icon-48.png" alt="Recall Defender Icon">
+    <h1>Recall Defender Activity Logs</h1>
+  </div>
+
+  <div class="controls">
+    <button id="refreshLogs">Refresh</button>
+    <button id="clearLogs" class="secondary">Clear All Logs</button>
+  </div>
+
+  <div id="logs">
+    <div class="empty-state">No activity logs found</div>
+  </div>
+
+  <script src="logs.js"></script>
+</body>
+</html>
