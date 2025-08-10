@@ -47,15 +47,17 @@ web-ext build
 📂 Project Structure
 text
 
-recall-defender-firefox/
-├── src/
-│   ├── background/    # Core blocking logic
-│   ├── content/       # API protections
-│   ├── options/       # Settings page
-│   └── popup/         # Extension popup
-├── icons/             # Extension icons
-├── _locales/          # Translations
-└── manifest.json      # Extension config
+
+
+   recall-defender-firefox/
+   ├── src/
+   │   ├── background/    # Core blocking logic
+   │   ├── content/       # API protections
+   │   ├── options/       # Settings page
+   │   └── popup/         # Extension popup
+   ├── icons/             # Extension icons
+   ├── _locales/          # Translations
+   └── manifest.json      # Extension config
 
 🤝 Contributing
 
@@ -75,7 +77,19 @@ We welcome contributions! Please follow these steps:
 
 If you find this extension useful, consider supporting its development:
 
-https://img.shields.io/badge/Donate-PayPal-blue.svg
+
+## 💝 Donaciones / Donations
+
+Si este proyecto te resulta útil, considera apoyar su desarrollo:  
+If you find this project useful, consider supporting its development:
+
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal&style=for-the-badge)](https://paypal.me/herin2019)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?logo=buymeacoffee&logoColor=black&style=for-the-badge)](https://www.buymeacoffee.com/Odisey25)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-2962FF?logo=githubsponsors&logoColor=white&style=for-the-badge)](https://github.com/sponsors/Odisey25)
+
+✨ ¡Tu apoyo ayuda a mantener y mejorar este proyecto!  
+✨ Your support helps maintain and improve this project!
+
 
 Your support helps maintain and improve this privacy tool!
 📜 License
