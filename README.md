@@ -7,8 +7,7 @@
 
 A privacy-focused Firefox extension that blocks Microsoft Recall telemetry and protects against unwanted data collection.
 
-![Extension Screenshot](assets/screenshot.png) *(Replace with your actual screenshot)*
-
+![Extension Screenshot](assets/screenshot.png) 
 ## ✨ Features
 
 - 🔥 **Blocks Recall domains**: `telemetry.microsoft.com`, `recall.windows.com`, etc.
@@ -82,7 +81,6 @@ Your support helps maintain and improve this privacy tool!
 📜 License
 
 MIT © Odisey25
+<p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> ```
 
 [Support] [PayPal] [Buy Me a Coffee]
-
-<p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> 
