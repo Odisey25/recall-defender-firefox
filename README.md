@@ -47,7 +47,7 @@ web-ext build
 📂 Project Structure
 text
 
-
+```bash
 
    recall-defender-firefox/
    ├── src/
@@ -58,7 +58,7 @@ text
    ├── icons/             # Extension icons
    ├── _locales/          # Translations
    └── manifest.json      # Extension config
-
+ ```
 🤝 Contributing
 
 We welcome contributions! Please follow these steps:
@@ -98,4 +98,3 @@ MIT © Odisey25
 
 <p align="center"> <img src="https://img.shields.io/badge/Made_for-Firefox-orange?logo=firefox" alt="Made for Firefox"> </p> 
 
-[Support] [PayPal] [Buy Me a Coffee]
