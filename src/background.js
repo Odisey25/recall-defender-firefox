@@ -92,3 +92,15 @@ chrome.runtime.onInstalled.addListener(() => {
   const activeLanguage = initializeLanguageSupport();
   console.log(`Active language: ${activeLanguage}`);
 });
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "settingsUpdated") {
+      chrome.webRequest.onBeforeRequest.removeListener(blockDomains);
+      setupRequestBlocking();
+      console.log("Settings updated successfully");
+  }
+});
+
+chrome.storage.sync.getBytesInUse(bytes => {
+  console.log(`Storage used: ${bytes} bytes`);
+});
